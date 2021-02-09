@@ -15,7 +15,7 @@ By understanding how the web works, you can write more efficient, secure, and so
 
 ## [Browser](#browser)  
 
-A browser is software that displays source code to users in a way that is easy for humans to view and understand. Browsers read HTML, CSS, JavaScript and other files in order to know what to display to the user. Chrome, Firefox, and Safari are examples of browsers.  
+A browser is software that displays source code to users in a way that is easy for humans to view and understand. It is the frontend of web applications. Browsers read HTML, CSS, JavaScript and other files in order to know what to display to the user. Chrome, Firefox, and Safari are examples of browsers.  
 
 Browsers have an address bar where users can input an address for the website that they want the browser to display. The address a user enters into the address bar is called a **domain name**. A [domain name](https://en.wikipedia.org/wiki/Domain_name) is a series of letters and numbers that is easy to remember, usually prefixed with `www` and suffixed with one of several options, like `.com`. For instance, the domain name for ITC's website is `www.itc.tech`.  
 
@@ -46,19 +46,20 @@ Some browsers have developer tools. Look at the inspector in your browser to exp
 
 ## [Server](#server)   
 
-    -- Software that runs on a [machine](https://media.geeksforgeeks.org/wp-content/uploads/20200429161002/server-image-1.png) and listens for incoming requests   
-    -- [Express.js](https://expressjs.com/en/starter/hello-world.html) is an example of a JavaScript-based server framework  
-    -- A server communicates with browsers, other servers, and databases  
-    -- Has [routes that receive requests and send responses](https://expressjs.com/en/starter/basic-routing.html)  
-    -- A route is like a server address (is not the same as a domain name or url)  
-    -- Browser [sends request](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) to server route (or one server sends request to another server)  
-    -- Server route responds with a response  
-    -- A route usually has some functionality associated with it in addition to sending a response, like calling a database and processing data  
-    -- Browser [receives response](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch#checking_that_the_fetch_was_successful) and displays it to the user  
-    -- In addition to communicating with browsers, server can also create, update, read, and delete data from databases  
-    -- Servers are written in many languages (two common ones are Node.js and Python)  
-    -- In the ITC Fullstack bootcamp, you build your own servers and communicate with third-party servers  
-    -- In this program, you will interact with third-party servers when learning about asynchronous code  
+A server is software that runs on a [machine](https://media.geeksforgeeks.org/wp-content/uploads/20200429161002/server-image-1.png) and listens for incoming requests. It is part of the backend of web applications. Instead of using browsers to read server-side code, you use HTTP to communicate with servers. For instance, you can send HTTP requests **to** servers from browsers, and you can send HTTP requests **from** servers to other servers and databases. You can write servers in many different programming languages. [Express.js](https://expressjs.com/en/starter/hello-world.html) is an example of a JavaScript-based server framework.   
+
+Like the frontend, a server has a domain name and IP address. You can use your server's domain name in your server-side code to write routes for others to send requests to. A route is a string that extends the domain name, like in `www.api.com/get-all-users/` the domain is `www.api.com` and the route is `/get-all-users/`.
+
+In a server, a route directs an incoming request to a specific function. Unlike a route on the frontend that tells the browser which information to display, a [server route](https://expressjs.com/en/starter/basic-routing.html) tells the server what information to process and how to do it. In other words, a server has some functionality associated with it. This difference between frontend and server-side routes is an important concept to understand.  
+
+You can customize your routes in many ways. For instance, you can declare what type of HTTP requests the route accepts. Plus, the route's functionality can be many different things. For instance, upon receiving a request, some of the things a route function can do are send a response to the requesting party, send a request to a database, or receive incoming information, process it and return a result.  
+
+Here is an example flow of a web application. A user clicks a button displayed by the browser. The browser [sends a request](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) to a server route asking for a user's profile information. The request triggers the server route's function. That function sends a request to a database asking for the data that the browser asked for. 
+
+The database responds to the server route with the data. The server route receives the data from the database and sends it in a response to the browser's request. Finally, the browser [receives the response](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch#checking_that_the_fetch_was_successful) and displays it to the user.  
+    
+When a server communicates with a database, it is for the purpose of either creating, updating, reading, or deleting data from the database. More about databases below.   
+
 ## [Database](#database)  
     -- A database stores electronic information  
     -- Databases live on a machine  
