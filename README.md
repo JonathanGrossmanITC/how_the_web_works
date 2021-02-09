@@ -1,6 +1,12 @@
 # How the web works
 
-The material in this file contains basic information and links about how the web works. 
+The material in this file contains basic information and links about how the web works. The web is a network of interactions between all kinds of machines and software. 
+
+The general web framework at the user level consists of clients, servers, hosting servers, domain names, IP addresses, and devices. Across the web, the machines and software connected to the web send requests and responses to exchange data packages. Those packages allow for the transfer of information across the web, from one machine or software to another. That information may be a user's profile, sports scores, or even the files necessary to show a webpage on a screen.
+
+In order to communicate, web entities need a common language for sending information. Hyper-text transfer protocol (HTTP) defines the rules for web communication. HTTP communication is a one-way request that is capable of receiving a response. In web development, this usually means that a client sends a request to a server (or one server to another server), and then the server responds to the client (or server).  
+
+Other ways exist for machines to communicate with one another. For instance, web sockets and related technologies enable real-time communication where requests can go in two-ways instead of just the one.
 
 The purpose of this lesson is to introduce to you some of the overarching concepts of web development. These overarching concepts each play an important role in influencing how to structure your applications. After this lesson, you'll have a better idea of how fullstack applications are structured and how the data flows once a user visits a webpage.
 
@@ -11,7 +17,7 @@ After this lesson, you will know:
 - How [**databases**](#database) fit into a web application  
 - What [**HTTP**](#http) is and why the web needs it  
 
-By understanding how the web works, you can write more efficient, secure, and sophistacted web applications. Plus, the more you know about the overarching concepts, the faster you'll become at building projects, and it will become easier for you to maintain and debug your work.  
+By understanding how the web works, you can write more efficient, secure, and sophisticated web applications. Plus, the more you know about the overarching concepts, the faster you'll become at building projects, and it will become easier for you to maintain and debug your work.  
 
 ## [Browser](#browser)  
 
@@ -73,31 +79,16 @@ Like servers, databases can receive incoming requests. In web applications, typi
 Later in this fullstack course, you'll learn how to make your own databases, connect them to your server, and send and receive responses from your frontend all the way to your database and back.
  
  ## [HTTP](#http)  
-   - A protocol for sending and receiving messages over the web  
-   - [Request methods](https://www.w3schools.com/tags/ref_httpmethods.asp) distinguish between they type of request you are sending  
-   - [Response status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status) help you know the status of a response  
-   - [JSON](https://www.w3schools.com/whatis/whatis_json.asp) is the data format you use to send and receive data via HTTP  
-   - You will work with requests, responses, and JSON in this course and the ITC Fullstack Program  
-  
+ 
+ 
+Hyper-text transfer protocol (HTTP) is the language that standardizes how clients and servers communicate with one another across the web. HTTPS is the same as HTTP except the communication between clients and servers is encrypted for security. In this lesson, unless said otherwise, the discussion applies to both HTTP and HTTPS.  
 
-+++++ MORE MATERIAL +++++
+According to the protocol, a client sends a request to a server. A request is a data packet containing a body and meta data. The body contains the data sent by the client. The meta data includes information about the request, including the [HTTP request method](https://www.w3schools.com/tags/ref_httpmethods.asp) for that request. Request methods distinguish between the type of request you are sending. The two methods for you to know about are GET and POST. You use the GET method to ask for information and the POST method to send information in your request.
 
-
-Clients, servers, hosting servers, domain names, IP addresses, mobile devices -- any interaction between computers / machines. Use requests and responses to exchange data packages containing the information necessary to show a webpage on a screen (desktop, laptop, mobile, etc.). HTTP communication is one-way, request, then response. In web development, this usually means that a client sends a request to a server (or one server to another server), and then the server responds to the client (or server).  . . . As opposed to HTTP requests, other ways exist for machines to communicate with on another. For instance, web sockets and related technologies enable real-time communication where 
-
-
-
-===
-
-
-
-# [HTTP](#http)
-
-Hyper-text transfer protocol (HTTP) is the language that standardizes how clients and servers communicate with one another across the web. According to HTTP, a client sends a request, which is a data packet containing a body and meta data, to a server. The server responds to the request. The response is a data packet containing a response to the request body and meta data. HTTPS is the same as HTTP except the communication between clients and servers is encrypted for security. 
+The server responds to the request. The response is a data packet containing a response to the request body and meta data. Something a response might include in the body is a the data requested by the client and a [response status code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status). Response status codes help you know the status of a response, like whether it was successful, resulting in a redirect, unsuccessful due to a problem with the request, or unsuccessful because of a problem with the server.     
 
 Like how it's essential that a spoken language have rules for people to understand one another, having a standarized way for clients and servers to communicate is essential. A client has to know how to format a request in a way that the receiving server can interpret in order to provide a coherent response. Same goes for responses. The server has to know how to respond in a way that the client will understand. This is what HTTP and HTTPS are for.
 
-Using HTTP and HTTPS is how a browser uses a domain name to request an IP address and an IP addresss to request a website's source code, such as HTML, CSS, and JavaScript files. Visit the domain name for a website you like. In the browser, open the inspector and visit the Network tab. In the Name column, do you see anythng? What file types do you see? In the Network tab, look at the other tabs, like Headers, Preview, and Response, for different file types. What do you see? Do any of them contain source code when viewed in the response tab?
+Using HTTP is how a browser uses a domain name to request an IP address and an IP addresss to request a website's source code, such as HTML, CSS, and JavaScript files. Visit the domain name for a website you like. In the browser, open the inspector and visit the Network tab. In the Name column, do you see anythng? What file types do you see? In the Network tab, look at the other tabs, like Headers, Preview, and Response, for different file types. What do you see? Do any of them contain source code when viewed in the response tab?  
 
-
-
+You also use HTTP to send requests for information from third-party APIs and even from your own servers. When sending and receiving data via HTTP, you use the [JSON](https://www.w3schools.com/whatis/whatis_json.asp) data format. It looks like a JavaScript object. You'll convert the JSON into a JavaScript object inside your client-side code and an object in your server-side code for whatever languages it's written in.   
