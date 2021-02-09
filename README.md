@@ -34,7 +34,7 @@ The IPv6 address is a unique 128-bit number. It is more complex than IPv4. Here 
 2001:0db8:85a3:0000:0000:8a2e:0370:7334
 ```      
 
-It's not only domains that have IP addresses. Anything connected to the web has an IP address, including your computer. **Want to know your device's [public IP address](https://www.whatismyip.com/dns-lookup/)**? How about its **[private IP address(https://www.howtogeek.com/117371/how-to-find-your-computers-private-public-ip-addresses/)**? 
+It's not only domains that have IP addresses. Anything connected to the web has an IP address, including your computer. **Want to know your device's [public IP address](https://www.whatismyip.com/dns-lookup/)**? How about its **[private IP address](https://www.howtogeek.com/117371/how-to-find-your-computers-private-public-ip-addresses/)**? 
 
 When a user enters a domain name in the browser, the browser uses the domain name to get the domain's IP address. The browser sends a request to a Domain Name System ([DNS Server](https://en.wikipedia.org/wiki/Domain_Name_System)) asking for the domain name's IP address. The DNS Server matches the domain name to its corresponding IP address and responds to the browser with the IP address.
 
