@@ -76,19 +76,22 @@ You can use almost any programming language to interact with the popular databas
 
 Like servers, databases can receive incoming requests. In web applications, typically the requests to databases come from servers. The incoming request specifies whether it's creating a new entry or updating, reading, or deleting existing data. Unless you're building a database provider, you won't write the database routes. Instead, you read the database software documentation to learn how to send requests to your database. Typically, you need to connect your server and database and also know the right syntax for sending a request and processing the response.
 
-Later in this fullstack course, you'll learn how to make your own databases, connect them to your server, and send and receive responses from your frontend all the way to your database and back.
+Later in this fullstack course, you'll learn how to work with several kinds of databases.  
  
  ## [HTTP](#http)  
- 
  
 Hyper-text transfer protocol (HTTP) is the language that standardizes how clients and servers communicate with one another across the web. HTTPS is the same as HTTP except the communication between clients and servers is encrypted for security. In this lesson, unless said otherwise, the discussion applies to both HTTP and HTTPS.  
 
 According to the protocol, a client sends a request to a server. A request is a data packet containing a body and meta data. The body contains the data sent by the client. The meta data includes information about the request, including the [HTTP request method](https://www.w3schools.com/tags/ref_httpmethods.asp) for that request. Request methods distinguish between the type of request you are sending. The two methods for you to know about are GET and POST. You use the GET method to ask for information and the POST method to send information in your request.
 
-The server responds to the request. The response is a data packet containing a response to the request body and meta data. Something a response might include in the body is a the data requested by the client and a [response status code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status). Response status codes help you know the status of a response, like whether it was successful, resulting in a redirect, unsuccessful due to a problem with the request, or unsuccessful because of a problem with the server.     
+The server responds to the request. The response is a data packet containing a response to the request. Something a response might include is the data requested by the client and a [response status code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status). Response status codes help you know the status of a response, like whether it was successful, resulted in a redirect, unsuccessful due to a problem with the request, or unsuccessful because of a problem with the server.     
 
-Like how it's essential that a spoken language have rules for people to understand one another, having a standarized way for clients and servers to communicate is essential. A client has to know how to format a request in a way that the receiving server can interpret in order to provide a coherent response. Same goes for responses. The server has to know how to respond in a way that the client will understand. This is what HTTP and HTTPS are for.
+Like how it's essential that a spoken language have rules for people to understand one another, having a standarized way for clients and servers to communicate is essential. A client has to know how to format a request in a way that the receiving server can interpret in order to provide a coherent response. Same goes for responses. The server has to know how to respond in a way that the client will understand. This is what HTTP is for.
 
 Using HTTP is how a browser uses a domain name to request an IP address and an IP addresss to request a website's source code, such as HTML, CSS, and JavaScript files. Visit the domain name for a website you like. In the browser, open the inspector and visit the Network tab. In the Name column, do you see anythng? What file types do you see? In the Network tab, look at the other tabs, like Headers, Preview, and Response, for different file types. What do you see? Do any of them contain source code when viewed in the response tab?  
 
 You also use HTTP to send requests for information from third-party APIs and even from your own servers. When sending and receiving data via HTTP, you use the [JSON](https://www.w3schools.com/whatis/whatis_json.asp) data format. It looks like a JavaScript object. You'll convert the JSON into a JavaScript object inside your client-side code and an object in your server-side code for whatever languages it's written in.   
+
+## Conclusion
+
+That's how the web works!
