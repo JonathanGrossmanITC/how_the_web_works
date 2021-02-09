@@ -61,14 +61,16 @@ The database responds to the server route with the data. The server route receiv
 When a server communicates with a database, it is for the purpose of either creating, updating, reading, or deleting data from the database. More about databases below.   
 
 ## [Database](#database)  
-    -- A database stores electronic information  
-    -- Databases live on a machine  
-    -- Many [types of databases](https://www.guru99.com/introduction-to-database-sql.html) exist  
-    -- Databases communicate with servers  
-    -- Then servers send the data to browsers or servers  
-    -- A common sequence: Browser sends a request to the server, which triggers the server to request data from the database; upon receiving the data from the database, the server responds to the browser's request with the data   
-    -- In the ITC Fullstack bootcamp, you work with relational databases (SQL) and NoSQL (MongoDB)  
-    -- In this program, you will not work with databases directly  
+
+A database stores electronic information on a machine or device. It's like an electronic file cabinet. Like a server, it makes up part of the backend of your web application. Many [types of databases](https://www.guru99.com/introduction-to-database-sql.html) exist. For instance, SQL is a popular relational database and MongoDB is a popular non-relational database. Later in this course, you'll learn about SQL and MongoDB and some of the things to consider when deciding which to use for your projects.  
+ 
+Your database lives on a machine. Depending upon your circumstances, that machine might be accessible only locally or it might be accessible in the cloud. Either way, to access data stored in the database, you need to use specific software. Many software options exist for interacting with relational databases, and MongoDB has a robust variety of software options for its non-relational databases.  
+
+You can use almost any programming language to interact with the popular database software options. The syntax you use to interact with the database depends upon the language your server is written in. The database software documentation shows you the syntax you need to use for the programming languages it supports.    
+
+Like servers, databases can receive incoming requests. In web applications, typically the requests to databases come from servers. The incoming request specifies whether it's creating a new entry or updating, reading, or deleting existing data. Unless you're building a database provider, you won't write the database routes. Instead, you read the database software documentation to learn how to send requests to your database. Typically, you need to connect your server and database and also know the right syntax for sending a request and processing the response.
+
+Later in this fullstack course, you'll learn how to make your own databases, connect them to your server, and send and receive responses from your frontend all the way to your database and back.
  
  ## [HTTP](#http)  
    - A protocol for sending and receiving messages over the web  
