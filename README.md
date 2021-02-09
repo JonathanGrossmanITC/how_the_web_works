@@ -6,10 +6,10 @@ The purpose of this lesson is to introduce to you some of the overarching concep
 
 After this lesson, you will know:
 
-- [How a **browser** knows which files to display to the user](#browser)     
-- [What a **server** is and how a browser communicates with it](#server)  
-- [What **HTTP** is and why the web needs it](#http)  
-- [How databases fit into a web application](#database)
+- How a [**browser**](#browser) knows which files to display to the user     
+- What a [**server**](#server) is and how a browser communicates with it  
+- How [**databases**](#database) fit into a web application  
+- What [**HTTP**](#http) is and why the web needs it  
 
 By understanding how the web works, you can write more efficient, secure, and sophistacted web applications. Plus, the more you know about the overarching concepts, the faster you'll become at building projects, and it will become easier for you to maintain and debug your work.  
 
@@ -23,7 +23,9 @@ Each domain name has a corresponding [IP Address](https://en.wikipedia.org/wiki/
 
 ```
 Sidenote:
-IP address can be in either IPv4 or IPv6 format. The IPv4 address is a unique 32-bit number. It is four decimal numbers separated by dots, each ranging from 0 to 255. Here is an example: 
+IP address can be in either IPv4 or IPv6 format. 
+
+The IPv4 address is a unique 32-bit number. It is four decimal numbers separated by dots, each ranging from 0 to 255. Here is an example: 
 
 172.16.254.1 
 
@@ -32,11 +34,11 @@ The IPv6 address is a unique 128-bit number. It is more complex than IPv4. Here 
 2001:0db8:85a3:0000:0000:8a2e:0370:7334
 ```      
 
-Anything connected to the web will have an IP address, including your computer. **Want to know your device's [public IP address](https://www.whatismyip.com/dns-lookup/)**? How about its **[private IP address(https://www.howtogeek.com/117371/how-to-find-your-computers-private-public-ip-addresses/)**? 
+It's not only domains that have IP addresses. Anything connected to the web has an IP address, including your computer. **Want to know your device's [public IP address](https://www.whatismyip.com/dns-lookup/)**? How about its **[private IP address(https://www.howtogeek.com/117371/how-to-find-your-computers-private-public-ip-addresses/)**? 
 
-When a user enters a domain name in the browser, the browser uses the domain name to get the IP address. To get the IP address for a domain name, when you enter a domain name into a browser, the browser sends a request to a Domain Name System ([DNS Server](https://en.wikipedia.org/wiki/Domain_Name_System)) asking for the domain name's IP address. The DNS Server matches the domain name to its corresponding IP address and responds to the browser with the IP address.
+When a user enters a domain name in the browser, the browser uses the domain name to get the domain's IP address. The browser sends a request to a Domain Name System ([DNS Server](https://en.wikipedia.org/wiki/Domain_Name_System)) asking for the domain name's IP address. The DNS Server matches the domain name to its corresponding IP address and responds to the browser with the IP address.
 
-Having used the domain name to get the IP address, the browser can retrieve the website source code. Website source code is stored with a [hosting provider](https://en.wikipedia.org/wiki/Web_hosting_service). The browser sends the IP address to the hosting provider asking for the website source code files for that IP address. The hosting provider responds with the files, and the browser uses them to assemble the webpage. 
+With the domain's IP address, the browser can retrieve the website source code. Website source code is stored with a [hosting provider](https://en.wikipedia.org/wiki/Web_hosting_service). AWS and GoDaddy are examples of hosting providers. The browser sends the IP address to the hosting provider asking for the website source code files for that IP address. The hosting provider responds with the files, and the browser uses them to assemble the webpage. 
 
 Ultimately, when a user visits the domain name, the browser uses that domain name to request your website's files from the hosting provider using the IP address. The source code, typically HTML, CSS, JavaScript and media files, instructs the browser on how to display the information     
 
@@ -80,13 +82,6 @@ Some browsers have developer tools. Look at the inspector in your browser to exp
 
 Clients, servers, hosting servers, domain names, IP addresses, mobile devices -- any interaction between computers / machines. Use requests and responses to exchange data packages containing the information necessary to show a webpage on a screen (desktop, laptop, mobile, etc.). HTTP communication is one-way, request, then response. In web development, this usually means that a client sends a request to a server (or one server to another server), and then the server responds to the client (or server).  . . . As opposed to HTTP requests, other ways exist for machines to communicate with on another. For instance, web sockets and related technologies enable real-time communication where 
 
-- Website Address
-- HTTP
-- Browser
-- Server
-- Database
-
-## [Website Address](#website-address)
 
 
 ===
